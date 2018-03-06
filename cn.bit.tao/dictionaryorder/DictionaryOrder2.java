@@ -8,23 +8,23 @@ import org.junit.Test;
 /*
  * @Author:TaoWenjun
  * @CreateTime:2018/03/06
- * <×ÖµäÅÅĞò>
+ * <å­—å…¸æ’åº>
  */
 public class DictionaryOrder2 {
-	//×ÔÈ»ÅÅĞò
+	//æ­£å¸¸æ’åº
 	public void dictionaryOrder(){
 		int n=16;
 		ArrayList<String> list=new ArrayList<String>();
 		for(int i=0;i<n;i++){
 			list.add(String.valueOf((i+1)));
 		}
-		System.out.println("×ÖµäÅÅĞòÇ°");
+		System.out.println("Ã—Ã–ÂµÃ¤Ã…Ã…ÃÃ²Ã‡Â°");
 		Iterator<String> iterator=list.iterator();
 		while(iterator.hasNext()){
 			System.out.println(iterator.next());
 		}
 		Collections.sort(list);
-		System.out.println("×ÖµäÅÅĞòºó");
+		System.out.println("Ã—Ã–ÂµÃ¤Ã…Ã…ÃÃ²ÂºÃ³");
 		Iterator<String> iterator2=list.iterator();
 		while(iterator2.hasNext()){
 			System.out.println(iterator2.next());
