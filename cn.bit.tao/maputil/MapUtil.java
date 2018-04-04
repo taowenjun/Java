@@ -8,22 +8,28 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.StringTokenizer;
 /**
  * @author Tao wenjun
  * MapUtil :保存和加载Map中的内容
  */
-public class SaveAndLoadMapUtil implements ISaveAndLoad{
+public class MapUtil implements ISaveAndLoad,IMapTransString{
 	
 	public static void main(String[] args) {
 		Map<String,String> map = new HashMap<String, String>();
 		map.put("file1", "hadoop");
 		map.put("file2", "kafka");
 		map.put("file3", "storm");
-		SaveAndLoadMapUtil util = new SaveAndLoadMapUtil();
+		MapUtil util = new MapUtil();
 		util.saveMap("D:\\tmp\\map.txt", map);
 		Map loadMap = util.loadMap("D:\\tmp\\map.txt");
 		System.out.println(loadMap.getOrDefault("file1","****"));
+		String str = util.transMapToString(map);
+		System.out.println(str);
+		System.out.println(util.transStringToMap(str).toString());
 	}
 
 	@Override
@@ -77,6 +83,29 @@ public class SaveAndLoadMapUtil implements ISaveAndLoad{
 				}
 			}
 		}
+	}
+
+	@Override
+	public String transMapToString(Map map) {
+		Map.Entry<String, String> entry = null;
+		StringBuffer sb = new StringBuffer();
+		for(Iterator iterator = map.entrySet().iterator();iterator.hasNext();){
+			entry = (Entry) iterator.next();
+			sb.append(entry.getKey().toString()).append("'").
+			append(null==entry.getValue()?"":entry.getValue().toString()).append(iterator.hasNext()?"^":"");
+		}
+		return sb.toString();
+	}
+
+	@Override
+	public Map transStringToMap(String str) {
+		Map map = new HashMap();
+		StringTokenizer items=null;
+		for(StringTokenizer entrys=new StringTokenizer(str, "^");entrys.hasMoreTokens();){
+			items=new StringTokenizer(entrys.nextToken(), "'");
+			map.put(items.nextToken(), items.hasMoreTokens()?items.nextToken():"");
+		}
+		return map;
 	}
 
 }
