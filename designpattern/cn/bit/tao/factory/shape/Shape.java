@@ -1,7 +1,7 @@
 package cn.bit.tao.factory.shape;
 
 /**
- * @author Administrator
+ * @author Tao wenjun
  * Shape½Ó¿Ú
  */
 public interface Shape {

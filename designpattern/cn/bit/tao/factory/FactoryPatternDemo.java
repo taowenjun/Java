@@ -1,7 +1,10 @@
 package cn.bit.tao.factory;
 
 import cn.bit.tao.factory.shape.Shape;
-
+/**
+ * @author Tao wenjun
+ * 工厂设计模式
+ */
 public class FactoryPatternDemo {
 
 	public static void main(String[] args) {

@@ -4,7 +4,10 @@ import cn.bit.tao.factory.entity.Circle;
 import cn.bit.tao.factory.entity.Rectangle;
 import cn.bit.tao.factory.entity.Square;
 import cn.bit.tao.factory.shape.Shape;
-
+/**
+ * @author Tao wenjun
+ * Shapeπ§≥ß¿‡
+ */
 public class ShapeFactory {
 	public Shape getShape(String shapeType){
 		if(shapeType==null){
