@@ -2,7 +2,7 @@ package cn.tao.thread.polling;
 /**
  *@author  tao wenjun
  *@date 2018年4月20日
- *
+ *线程间通信--轮询
  */
 
 public class Run {
