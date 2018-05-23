@@ -17,6 +17,9 @@ public class TestMedian {
 				34,90,67,45,1,4,5,6,7,9,10});
 		median.addAll(list);
 		System.out.println(median.getM());
+		
+		MedianOfTwoSortedArray medianOfTA=new MedianOfTwoSortedArray();
+		System.out.println(medianOfTA.findMedianSortedArrays(new int[]{1,3}, new int[]{2}));
 	}
 
 }
