@@ -1,5 +1,7 @@
 #说明
 
+adapter:适配器模式
+
 chainpattern：责任链模式
 
 commandpattern:命令模式
