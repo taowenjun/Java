@@ -1,4 +1,4 @@
-package cn.bit.tao.recallpro;
+package cn.bit.tao.callback;
 
 /**
  * 该类模拟员工类
@@ -12,7 +12,7 @@ public class Personnel {
 	 * @param manager：布置任务的经理
 	 * @param task：布置的任务
 	 */
-	public void doSomething(Manager manager,String task){
+	public void doSomething(CallBack manager,String task){
 		
 		//总经理通过调用Personnel的该方法告诉员工干什么
 		System.out.println("      员工：总经理要我做"+task);

@@ -1,11 +1,11 @@
-package cn.bit.tao.recallpro;
+package cn.bit.tao.callback;
 
 /**
- * 该类模拟总经理
+ * 该类模拟总经理，实现CallBack管理者类
  * @author Tao Wenjun
  * @date 2018年7月13日
  */
-public class Manager {
+public class Manager implements CallBack{
 	
 	public Manager(){
 		
@@ -25,6 +25,7 @@ public class Manager {
 	 * 总经理的联系方式
 	 * @param result
 	 */
+	@Override
 	public void phoneCall(String result){
 		System.out.print(" 总经理：接到电话，被告知员工的工作结果：");
 		System.out.println(result);

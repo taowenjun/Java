@@ -1,4 +1,4 @@
-package cn.bit.tao.recallpro;
+package cn.bit.tao.callback;
 
 /**
  * ²âÊÔ»Øµ÷º¯Êı
